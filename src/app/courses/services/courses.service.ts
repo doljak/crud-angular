@@ -6,15 +6,10 @@ import { Course } from '../courses/courses.model';
   providedIn: 'root',
 })
 export class CoursesService {
+  private readonly API = 'http://localhost:3000/posts/';
   constructor(private httpClient: HttpClient) {}
 
-  getList(): Course[] {
-    return [
-      {
-        _id: '1',
-        name: 'Angular',
-        category: 'Front end a',
-      },
-    ];
+  getList() {
+    return this.httpClient.get<Course[]>(this.API);
   }
 }
