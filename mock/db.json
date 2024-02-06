@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "_id": "1",
+      "name": "Angular",
+      "category": "Front end"
+    },
+    {
+      "_id": "2",
+      "name": "Spring boot",
+      "category": "Back end"
+    },
+    {
+      "_id": "3",
+      "name": "Node",
+      "category": "FullStack"
+    },
+    {
+      "_id": "4",
+      "name": "MongoDB",
+      "category": "DB No SQL"
+    }
+  ]
+}
