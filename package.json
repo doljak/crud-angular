@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --configuration=production",
     "test": "ng test",
-    "start:mock-server": "json-server ./mock/db.json"
+    "start:json-server": "json-server ./json-server/db.json",
+    "start:hapi-server": "node ./hapi-server/hapi.js"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "@angular-devkit/build-angular": "^17.1.2",
     "@angular/cli": "^17.1.2",
     "@angular/compiler-cli": "^17.1.0",
+    "@hapi/hapi": "^21.3.3",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",

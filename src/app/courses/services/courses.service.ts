@@ -8,10 +8,10 @@ import { Course } from '../courses/courses.model';
   providedIn: 'root',
 })
 export class CoursesService {
-  private readonly API = `${enviroment.apiUrl}/posts/`;
+  private readonly API = `${enviroment.apiUrl}`;
   constructor(private httpClient: HttpClient) {}
 
   getList() {
-    return this.httpClient.get<Course[]>(this.API);
+    return this.httpClient.get<Course[]>(`${this.API}/courses`);
   }
 }
