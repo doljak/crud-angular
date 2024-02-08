@@ -1,28 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { Observable, first, tap } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { AppMaterialModule } from '../../shared/app-material/app-material.module';
 import { CoursesService } from '../services/courses.service';
 import { Course } from './courses.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [RouterOutlet, AppMaterialModule],
+  imports: [CommonModule, RouterOutlet, AppMaterialModule],
   providers: [CoursesService],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss',
 })
 export class CoursesComponent {
-  $courses: Observable<Course[]>;
+  courses$!: Observable<Course[]>;
+  finishedLoading: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   displayedColumns = ['name', 'category'];
 
   constructor(private coursesService: CoursesService) {
-    this.$courses = this.coursesService.getList().pipe(
-      first(),
-      tap((courses) => console.log(courses))
-    );
+    this.courses$ = this.coursesService.getList();
+    this.finishedLoading.next(coursesService.finishedLoading);
   }
 }
