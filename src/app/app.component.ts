@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { CoursesComponent } from './courses/courses/courses.component';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
+import { DialogComponent } from './shared/dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { AppMaterialModule } from './shared/app-material/app-material.module';
     AppMaterialModule,
     HttpClientModule,
     CoursesComponent,
+    DialogComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
