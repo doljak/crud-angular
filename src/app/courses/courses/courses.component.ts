@@ -8,11 +8,18 @@ import { AppMaterialModule } from '../../shared/app-material/app-material.module
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 import { CoursesService } from '../services/courses.service';
 import { Course } from './courses.model';
+import { CategoryPipe } from '../../shared/pipes/category.pipe';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AppMaterialModule, DialogComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    AppMaterialModule,
+    DialogComponent,
+    CategoryPipe,
+  ],
   providers: [CoursesService],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss',

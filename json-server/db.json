@@ -3,22 +3,22 @@
     {
       "_id": "1",
       "name": "Angular",
-      "category": "Front end"
+      "category": "front-end"
     },
     {
       "_id": "2",
       "name": "Spring boot",
-      "category": "Back end"
+      "category": "back-end"
     },
     {
       "_id": "3",
       "name": "Node",
-      "category": "FullStack"
+      "category": "full-stack"
     },
     {
       "_id": "4",
       "name": "MongoDB",
-      "category": "DB No SQL"
+      "category": "database"
     }
   ]
 }
