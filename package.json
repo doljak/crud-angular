@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration=production",
+    "start": "ng serve --proxy-config proxy.config.local.js",
+    "start:mock": "ng serve --configuration mock --port 4300  --proxy-config proxy.config.local.js",
+    "build": "ng build --configuration production",
     "test": "ng test",
-    "start:json-server": "json-server ./json-server/db.json",
+    "start:json-server": "json-server ./json-server/db.json --routes ./json-server/routes.json",
     "start:hapi-server": "node ./hapi-server/hapi.js"
   },
   "private": true,

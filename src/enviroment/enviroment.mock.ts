@@ -1,5 +1,5 @@
 export const enviroment = {
   production: false,
-  mock:false,
-  apiUri: '/api'
+  mock:true,
+  apiUri: '/mock'
 };

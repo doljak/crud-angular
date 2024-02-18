@@ -13,28 +13,28 @@ const init = async () => {
 
   server.route({
     method: "GET",
-    path: "/courses",
+    path: "/mock/courses",
     handler: (request, h) => {
       return [
         {
           _id: "1",
           name: "Angular",
-          category: "Front end",
+          category: "front-end",
         },
         {
           _id: "2",
           name: "Spring boot",
-          category: "Back end",
+          category: "back-end",
         },
         {
           _id: "3",
           name: "Node",
-          category: "FullStack",
+          category: "full-s tack",
         },
         {
           _id: "4",
           name: "MongoDB",
-          category: "DB No SQL",
+          category: "database",
         },
       ];
     },

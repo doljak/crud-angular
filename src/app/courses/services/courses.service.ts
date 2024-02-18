@@ -9,12 +9,12 @@ import { delay, first, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class CoursesService {
-  private readonly API = `${enviroment.apiUrl}`;
+  private readonly API_COURSES = `${enviroment.apiUri}/courses`
   finishedLoading: boolean = false;
   constructor(private httpClient: HttpClient) {}
 
   getList() {
-    return this.httpClient.get<Course[]>(`${this.API}/courses`).pipe(
+    return this.httpClient.get<Course[]>(this.API_COURSES).pipe(
       first(),
       tap((courses) => {
         this.finishedLoading = true;

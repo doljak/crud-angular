@@ -1,4 +1,5 @@
 export const enviroment = {
   production: true,
-  apiUrl: 'https://prod.api.com',
+  mock:false,
+  apiUri: '/api'
 };
